@@ -1,0 +1,340 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+	color:rgb(46,48,146);
+}
+#warp{
+	margin:0 auto;
+	font-family:"宋体";
+	font-size:14px;
+}
+#head{
+	width:100%;
+	height:160px;
+	border-bottom:1px solid #000;
+	
+	}
+.top{
+	
+	height:110px;
+	border-bottom:1px solid #000;
+}
+.logo{
+	width:980px;
+	margin:0 auto;
+}
+.logo-left
+{   
+    float:left;
+	margin-left:10px;
+}
+.logo-right {
+	float:right;
+	margin-top:10px;
+	
+}
+#head .title {
+	text-align:right;
+	margin-bottom:10px;
+}
+.logo-right p{
+	font-family:CenturyGothic;
+	font-size:24px;
+}
+.logo-right p img{
+	 align:bottom;
+}
+.bar{
+	height:50px;
+	width:980px;
+	line-height:50px;
+	margin:0 auto;
+	
+}
+.bar-left{
+	float:left;
+	margin-left:30px;
+}
+	
+.bar form select{
+	width:120px;
+	height:20px;
+	color:rgb(204,204,204);
+	margin-top:15px;
+	text-align:center;
+	
+}
+.bar-right{
+	float:right;
+	margin-right:-30px;
+}
+.bar-right ul{
+	list-style-type:none;
+}
+.bar-right li{
+	float:right;
+}
+.bar-right a{
+	margin:30px;
+	line-height:50px;
+	font-weight:bold;
+}
+/*head结束*/
+#mainbody{
+	width:980px;
+	margin:0 auto;
+	font-size:14px;
+	font-family:"宋体";
+}
+.show_bar
+{
+	width:980px;
+	height:330px;
+	margin:0 auto;
+	font-size:14px;
+	font-family:"宋体";
+	position:relative;
+	overflow:hidden;
+}
+.big_img
+{
+	
+	width:5880px;
+	height:330px;
+	position:absolute;
+	left:-980px;
+	
+}
+.big_img li
+{
+	float:left;
+	width:980px;
+	height:330px;
+	overflow:hidden;
+	text-align:center;
+}
+.small_btm
+{
+	width:80px;
+	height:15px;
+	position:absolute;
+	top:310px;
+	z-index:50;
+	left:500px;
+}
+.small_btm li
+{
+	display:inline-block;
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	background:#999;
+}
+.small_btm li.on
+{
+	background:#F90;
+}
+.content
+{
+	margin-top:15px;
+	clear:both;
+}
+.content p.one{
+	color:rgb(24,73,118);
+	font-weight:bold;
+}
+.content .left{
+	width:530px;
+	float:left;
+	color:rgb(24,73,118);
+	line-height:26px;
+	font-size:14px;
+	
+}
+.content .right{
+	width:425px;
+	float:right;
+	line-height:21px;
+	
+}
+.con_top{
+	height:30px;
+	border-top:1px solid rgb(208,208,208);
+	border-bottom:1px solid rgb(208,208,208);
+}
+.top.box1{
+	float:left;
+}
+.left .mid{
+	margin:15px 10px 10px 0;	
+}
+.left .mid img{
+	margin-right:10px;
+}
+.mid img{
+	float:left;
+}
+.btm img{
+	margin-top:20px;
+}
+.right .mid{
+	margin-left:20px;
+}
+.right img{
+	margin-bottom:40px;
+	align:bottom;
+	
+}
+.contentbox{
+	margin:10px 0 20px 0;
+}
+
+.nav{
+	clear:both;
+	width:980px;
+	background:rgb(3,42,134);
+	height:40px;
+	line-height:40px;
+}
+.nav ul{
+	width:980px;
+	list-style-type:none;
+}
+.nav ul li{
+	float:left;
+	border-left:thin solid #FFF;
+	text-align:center;
+}
+.nav ul li a{
+	display:block;
+	text-decoration:none;
+	color:#FFF;
+	font-weight:bold;
+	padding:0 43px;
+}
+.photowall{
+	width:980px;
+	margin-top:10px;
+}
+.photowall img{
+	margin:0 -1px;
+}
+.main-btm{
+	width:980px;
+	margin:15px 10px 20px 10px;
+}
+.main-btm-top{
+	width:980px;
+	height:30px;
+	border-top:1px solid #999;
+	border-bottom:1px solid #999;
+	background:rgb(235,235,235);
+}
+.box1,.box2{
+	height:30px;
+	line-height:30px;
+}
+.box1{
+	background:rgb(250,250,250);
+	margin-left:10px;
+	float:left;
+}
+.box2{
+	float:right;
+}
+.main-btm-mid{
+	width:980px;
+}
+.main-btm-mid table{
+	margin:20px 0px 30px 0px;
+}
+.main-btm-mid .noborder{
+	border:none;
+}
+.main-btm-mid table tr{
+	height:30px;
+}
+.main-btm-mid table td{
+	line-height:20p;
+	border-right:1px solid #000;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.about{
+	border-top:3px solid rgb(23,35,126);
+	padding-top:10px;
+	
+}
+.about ul li{
+	list-style-type:none;
+	float:left;
+	margin:0 35px;
+}
+.about ul li ul{
+	margin:10px 0;
+	margin-bottom:10px;
+}
+.about ul li ul li{
+	clear:both;
+	margin:0;
+	line-height:20px;
+}
+.about img{
+	align:bottom;
+}
+/*mainbody结束*/
+#footer{
+	width:1000px;
+	clear:both;
+	margin:0px auto;	
+}
+.footer-nav{
+	
+	background:rgb(1,58,136);
+}
+.footer-nav table
+{ 
+	width:1000px;
+	height:30px;
+}
+.footer-nav table td{
+	padding: 0 20px;
+	border-right:1px solid #FFF;
+}
+.footer-nav table td.noborder{
+	 border:none;
+}
+.footer-nav table td a{
+	color:#FFF;
+	text-align:center;
+	font-weight:bold;
+}
+.tauch{
+	margin:20px 0 0 200px;
+	line-height:25px;
+	clear:both;
+}
+.tauch p{
+	margin-left:120px;
+}
+.power{
+	margin:0 100px;
+	line-height:25px;
+}
+.power p{
+	margin-left:250px;
+}
+.power .photo{
+	margin: 10px 0 30px;
+	text-align:center;
+}
+.power img{
+	margin:10px;
+}
+	

@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>松德装饰首页</title>
+<link href="css/shouye.css" rel="stylesheet" type="text/css" />
+<script src="javaScript/startMove.js"></script>
+</head>
+
+<body>
+<warp>
+<div id="head">
+  <div class="top">
+      <div class="logo">
+            <div class="logo-left">
+                <img src="images/logo.gif" />
+            </div>
+        	<div class="logo-right">
+          		<div class="title">
+            		<img src="images/about-1.gif" />
+           		</div> 
+            	<p><img src="images/about-02.jpg" /> TEL:4008-6767-38</p>
+       	   </div>
+      </div>
+  </div>
+  <div class="bar"> 
+     <div class="bar-left">
+    <form name="search" method="post" action="">
+      <select>
+        <option selected="selected">案例分析</option>
+       </select>
+    </form>
+    </div>
+    <div class="bar-right">
+      <ul>
+        <li><a href="关于我们.html">关于我们</a></li>
+        <li><a href="关于工程.html">荣誉资质</a></li>
+        <li><a href="关于团队.html">设计团队</a></li>
+        <li><a href="装修知识.html">装修知识</a></li>
+        <li><a href="关于我们.html">联系我们</a></li>
+        <li><a href="首页.html">首页</a></li>
+     </ul>
+    </div>
+  </div>
+</div>    
+  <div id="mainbody"> 
+  
+  <!--焦点图轮播开始-->
+    <div class="show_bar">
+      <ul class="big_img">
+         <li><img src="images/201207311057406.jpg"/></li>
+         <li><img src="images/201109291718573.jpg"></li>
+          <li><img src="images/201109291719040.jpg"/></li>
+          <li><img src="images/201207261743282.jpg" /></li>
+          <li><img src="images/201207311057406.jpg" /></li>
+           <li><img src="images/201109291718573.jpg" /></li>
+      </ul>
+      <ul class="small_btm">
+         <li class="on"></li>
+         <li></li>
+         <li></li>
+         <li></li>
+      </ul>
+    </div>
+<!--焦点图运动-->
+<script>
+window.onload = function()
+{
+	var mainbody = document.getElementById("mainbody");
+	var show_bar = getByClass(mainbody,'show_bar')[0];
+	var big_img = getByClass(mainbody,'big_img')[0];
+    var bigli = big_img.getElementsByTagName("li");
+	var small_btm = getByClass(mainbody,'small_btm')[0];
+	var smallLi = small_btm.getElementsByTagName("li");
+	var myIndex = 1;
+	var timer = null;
+	
+	
+	<!--按钮显示-->
+	
+function tab()
+{
+	
+	for(var j = 0; j < smallLi.length ; j++)
+	   {
+		  smallLi[j].className = '';
+	   }
+	  smallLi[myIndex-1].className = 'on';
+	  startMove(big_img,{left:-myIndex*980});
+}
+function next()
+{
+	myIndex+=1;
+	if(myIndex ==bigli.length-1) 
+	{
+		big_img.style.left=0;
+		myIndex = 1 ;
+	}
+  tab();
+}
+for(var i = 0 ; i <smallLi.length ; i++)
+{ 
+   smallLi[i].index = i+1;
+	smallLi[i].onclick = function()
+	{ 
+	   myIndex = this.index;
+	  tab();
+	};
+}
+timer =setInterval(next,2000);
+
+//播放暂停
+show_bar.onmouseover= function()
+{
+	clearInterval(timer);
+}
+show_bar.onmouseout = function()
+{
+	timer =setInterval(next,2000);
+}
+
+}
+</script>
+  <div class="content">
+  <div class="left">
+     <div class="con_top">
+         <div class="box1"><a href="#">公司简介</a></div>
+         <div class="box2"><a href="#">更多>> </a></div>
+      </div>
+      <div class="mid">  
+         <img src="images/index-02.gif" />
+          
+         <p class="one">宗旨：技术为先 质量为本 遵约守信真诚服务</p>
+         <p>广州市松德装饰工程有限公司是一家专业从事写字楼,办公室,商铺,专卖店,餐饮娱乐,酒店会所,厂房,展
+         厅,别墅住宅等装修设计,施工为一体的品牌企业，是经广州市工商局和中国建筑装饰协会批准注册成</p><img src="images/index-03.gif" />
+         
+      </div>
+         <div class="btm">
+            <img src="images/index-04.gif" />
+         </div>  
+    </div>
+    <div class="right">
+       <div class="con_top">
+         <div class="box1"><a href="#">装修知识</a></div>
+         <div class="box2"><a href="#">更多>></a></div>
+       </div>
+       <div class="mid">
+       <div class="contentbox">
+               <a href="#"><img src="images/index-05.gif" /></a>
+               <p class="one">广州装修公司家居布世家具的选购与保养</p><p>风格：由于布花的多变，搭配不同的造型，
+               风格便趋于多。但大多数家具所呈现的风格仍以温馨舒适为主....</p>
+         </div> 
+        <div class="contentbox">
+               <a href="#"><img src="images/index-05.gif"/></a>
+               <p class="one">广州装修公司家居布世家具的选购与保养</p>广州装修公司之家居布艺的多变，搭配不同的造型，风格便趋于多元化....
+          </div>
+        <div class="contenboxt">
+                <a href="#"><img src="images/index-05.gif"/></a>
+                <p class="one">广州装修公司家居布世家具的选购与保养</p>风格便趋于多元化。但大多娄家具所呈现的风格仍以温馨舒适为主....
+         </div>      
+           <div class="contentbox"><a href="#"><img src="images/index-05.gif" /></a>
+                <p class="one">广州装修公司家居布世家具的选购与保养</p>风格：由于花布的多变，搭配不同的造型，风格便趋于多元化。但大多数家具所呈现
+                的风格仍以温馨舒适为主...
+          </div>
+    </div>
+    </div>
+    </div>
+                 
+    <div class="nav">
+          <ul>
+          <li><a href="#"><h4>酒店</h4></a></li>
+          <li><a href="#"><h4>KTV</h4></a></li>
+          <li><a href="#"><h4>会所</h4></a></li>
+          <li><a href="#"><h4>办公室</h4></a></li>
+          <li><a href="#"><h4>别墅</h4></a></li>
+          <li><a href="#"><h4>美容院</h4></a></li>
+          <li><a href="#"><h4>店铺</h4></a></li>
+          <li><a href="#"><h4>家居</h4></a></li>
+         </ul>
+        </div>
+        <div class="photowall">
+         <img src="images/index-06.jpg" />
+         <img src="images/index-07.jpg" />
+         <img src="images/index-08.gif"/>
+         <img src="images/index-09.gif" />
+         <img src="images/index-10.jpg"/>
+         <img src="images/index-11.jpg" />
+         <img src="images/index-12.gif" />
+         <img src="images/index-13.gif" />
+         <img src="images/index-14.gif" />
+         <img src="images/index-15.gif" />
+         <img src="images/index-16.gif" />
+         <img src="images/index-17.gif"/>
+       </div>
+      <div class="main-btm">
+           <div class="main-btm-top">
+              <div class="box1"><h4>友情链接</h4></div>
+              <div class="box2"><h4>更多>></h4></div>
+           </div>
+             <div class="main-btm-mid">
+             <table>
+               <tr>
+                 <td><a href="#">装修第一网</a></td>
+                 <td><a href="#">中国装修网</a></td>
+                 <td><a href="#">装修大全</a></td>
+                 <td><a href="#">新浪装修家居网</a></td>
+                 <td><a href="#">中国装修网</a></td>
+                 <td><a href="#">装修大全</a></td>
+                 <td><a href="#">新浪装修家居网</a></td>
+                 <td><a href="#">中国装修网</a></td>
+                 <td><a href="#">装修大全</a></td>
+                 <td class="noborder"><a href="#">新浪装修家居网</a></td>
+                </tr>
+                <tr>
+                 <td><a href="#">装修第一网</a></td>
+                 <td><a href="#">中国装修网</a></td>
+                 <td><a href="#">装修大全</a></td>
+                 <td><a href="#">新浪装修家居网</a></td>
+                 <td><a href="#">中国装修网</a></td>
+                 <td><a href="#">装修大全</a></td>
+                 <td><a href="#">新浪装修家居网</a></td>
+                 <td><a href="#">中国装修网</a></td>
+                 <td><a href="#">装修大全</a></td>
+                 <td class="noborder"><a href="#">新浪装修家居网</a></td>
+               </tr>
+               <tr>
+                 <td><a href="#">装修第一网</a></td>
+                 <td><a href="#">中国装修网</a></td>
+                 <td><a href="#">装修大全</a></td>
+                 <td><a href="#">新浪装修家居网</a></td>
+                 <td><a href="#">中国装修网</a></td>
+                 <td><a href="#">装修大全</a></td>
+                 <td><a href="#">新浪装修家居网</a></td>
+                 <td><a href="#">中国装修网</a></td>
+                 <td><a href="#">装修大全</a></td>
+                 <td class="noborder"><a href="#">新浪装修家居网</a></td>
+               </tr>
+             </table>             
+             </div>
+           <div class="about">
+      <ul class="ulone">
+        <li><a href="#"><h3>关于我们</h3></a>
+             <ul>
+                 <li><a href="#">公司简介</a></li>
+                 <li><a href="#">企业文化</a></li>
+                 <li><a href="#">荣誉资质</a></li>
+              </ul>   
+        </li>
+        <li><a href="#"><h3>荣誉资质</h3></a>
+            <ul>
+               <li><a href="#">营业执照</a></li>
+               <li><a href="#">税务登记</a></li>
+            </ul>
+        </li>
+       <li><a href="#"><h3>工程案例</h3></a>
+          <ul>
+            <li><a href="#">酒店</a></li>
+            <li><a href="#">KTV</a></li>
+            <li><a href="#">会所</a></li>
+            <li><a href="#">办公室</a></li>
+            <li><a href="#">别墅</a></li>
+            <li><a href="#">美容院</a></li>
+            <li><a href="#">店铺</a></li>
+            <li><a href="#">家居</a></li>
+          </ul>
+       </li>
+       <li><a href="#"><h3>设计团队</h3></a>
+          <ul>
+              <li><a href="#">设计主管</a></li>
+              <li><a href="#">设计总监</a></li>
+              <li><a href="#">设计经理</a></li>
+          </ul>
+       </li>
+       <li><a href="#"><h3>装修知识</h3></a>
+         <ul>
+              <li><a href="#">松德新闻</a></li>
+              <li><a href="#">装修问答</a></li>
+              <li><a href="#">风水智慧</a></li>
+         </ul>
+       </li>
+      <li><a href="#"><h3>联系我们</h3></a>
+        <ul>
+          <li><img src="images/index_首页_20.gif" /> 020-37883209</li>
+          <li><img src="images/index_首页_21.gif" />广州市天河区临江大道401号<br />&nbsp;&nbsp;&nbsp;珠江新城海滨花园南区1栋405</li>
+          <li><img src="images/index_首页_22.jpg" />songde@163.com</li> 
+        </ul>
+      </li>
+     </ul>
+   </div>
+</div>
+<div id="footer">
+<div class="footer-nav">
+     <table>
+       <tr>
+        <td><a href="#">首页</a></td>
+        <td><a href="#">关于我们</a></td>
+        <td><a href="#">荣誉资质</a></td>
+        <td><a href="#">工程案例</a></td>
+        <td><a href="#">设计团队</a></td>
+        <td><a href="#">装修知识</a></td>
+        <td><a href="#">联系我们</a></td>
+        <td class="noborder"><a href="#">回顶部</a></td>
+     </tr>
+    </table>
+  </div>
+ <div class="tauch">
+   <img src="images/index_首页_23.gif" />24小时装修设计热线:400-123-4568(免长途） <img src="images/index_首页_24.gif" />
+    24小时值班手机:138888888888<br/>
+      <p>电话:020-37883209 020-38319670 传真:020-37883529</p>
+      </div>
+      <div class="power">
+      版权所有@2013广州市松德装饰有限公司All rights reserved. Powered By kpkj.net|粤ICP备1234567890号|
+        <p>技术与运营支持:鲲鹏科技</p>
+        <div class="photo">
+        <img src="images/index_首页_25.gif" /><img src="images/index_首页_26.gif" /><img src="images/index_首页_27.jpg" />
+        </div>
+  </div>
+</div>
+</div>
+</body>
+</html>
